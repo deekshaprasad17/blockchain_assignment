@@ -1,0 +1,22 @@
+Organizations:
+  - &Manufacturer
+    Name: ManufacturerMSP
+    ID: ManufacturerMSP
+    MSPDir: crypto-config/peerOrganizations/manufacturer.example.com/msp
+  - &Distributor
+    Name: DistributorMSP
+    ID: DistributorMSP
+    MSPDir: crypto-config/peerOrganizations/distributor.example.com/msp
+  - &Retailer
+    Name: RetailerMSP
+    ID: RetailerMSP
+    MSPDir: crypto-config/peerOrganizations/retailer.example.com/msp
+
+Profiles:
+  ThreeOrgsChannel:
+    Consortium: SampleConsortium
+    Application:
+      Organizations:
+        - *Manufacturer
+        - *Distributor
+        - *Retailer
